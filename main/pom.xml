@@ -4,7 +4,7 @@
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
 
-   <groupId>org.jmockit</groupId><artifactId>jmockit</artifactId><version>1.49</version>
+   <groupId>org.jmockit</groupId><artifactId>jmockit</artifactId><version>1.49.1</version>
    <packaging>jar</packaging>
 
    <name>JMockit</name>
@@ -29,6 +29,19 @@
       <url>https://github.com/jmockit/jmockit1</url>
       <connection>scm:git:https://github.com/jmockit/jmockit1</connection>
    </scm>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Bison snapshot repository</name>
+      <url>https://repo.bison-group.com/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Sonatype Nexus release repository</name>
+      <url>https://repo.bison-group.com/artifactory/libs-local-bison</url>
+    </repository>
+  </distributionManagement>
+
    <issueManagement>
       <system>GitHub Issues</system>
       <url>https://github.com/jmockit/jmockit1/issues</url>
@@ -180,6 +193,7 @@
                </execution>
             </executions>
          </plugin>
+<!--
          <plugin>
             <groupId>org.sonatype.plugins</groupId><artifactId>nexus-staging-maven-plugin</artifactId><version>1.6.8</version>
             <extensions>true</extensions>
@@ -189,6 +203,7 @@
                <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
          </plugin>
+-->
       </plugins>
    </build>
 
